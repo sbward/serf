@@ -41,7 +41,7 @@ func testMember(t *testing.T, members []Member, name string, status MemberStatus
 	for _, m := range members {
 		if m.Name == name {
 			if m.Status != status {
-				t.Fatalf("bad state for %s: %d", name, m.Status)
+				t.Fatalf("bad state for %s: %d (should be %d)", name, m.Status, status)
 			}
 
 			return
